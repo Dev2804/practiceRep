@@ -65,18 +65,16 @@ if __name__ == "__main__":
             print("You fall into the chasm of doom.") # Out of bounds.
             
         else:
-            if grid[currentRow][currentCol] == EMPTY:
+            cell = grid[currentRow][currentCol]
+            if cell == EMPTY:
                 grid[currentRow][currentCol] = VISITED
-                
-            elif grid[currentRow][currentCol] == WALL:
+            elif cell == WALL:
                 done = True
-                print("You stumble blindly into a solid concrete wall.") # Hit wall.
-
-            elif grid[currentRow][currentCol] == END:
+                print("You stumble blindly into a solid concrete wall.")
+            elif cell == END:
                 done = True
                 solved = True
-                print("SOLVED!") # Solved.
-                
+                print("SOLVED!")
             else:
                 pass # Do nothing
         
