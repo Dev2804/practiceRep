@@ -56,13 +56,13 @@ if __name__ == "__main__":
             currentCol -= 1
         
         else:
-            print("MESSAGE 1") # Invalid direction.
+            print("You have no idea where you're going.") # Invalid direction.
         
         if (currentRow < 0 or currentCol < 0 
                         or currentRow >= len(grid) 
                         or currentCol >= len(grid[currentRow])):
             done = True
-            print("MESSAGE 2") # Out of bounds.
+            print("You fall into the chasm of doom.") # Out of bounds.
             
         else:
             if grid[currentRow][currentCol] == EMPTY:
@@ -70,7 +70,7 @@ if __name__ == "__main__":
                 
             elif grid[currentRow][currentCol] == WALL:
                 done = True
-                print("MESSAGE 3") # Hit wall.
+                print("You stumble blindly into a solid concrete wall.") # Hit wall.
 
             elif grid[currentRow][currentCol] == END:
                 done = True
